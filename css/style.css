@@ -1,0 +1,200 @@
+:root {
+  --color-red:#ff7473;
+  --color-yellow:#ffc952;
+  --color-blue: #47b8e0;
+  --color-black: #34314c;
+  --color-Grey-light-1: #faf9f9;
+  --color-Grey-light-2: #f4f2f2;
+  --color-Grey-light-3: #f0eeee;
+  --color-Grey-light-4: #ccc;
+  --color-Grey-dark-1: #333;
+  --color-Grey-dark-2: #777;
+  --color-Grey-dark-3: #999;
+  --line: 1px solid var(--color-Grey-light-2);
+  --shadow-light:  0 2rem 5rem rgba(0, 0, 0, 0.06); }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+*::before,
+*::after,
+* {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 80em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 55em) {
+    html {
+      font-size: 40%; } }
+  @media only screen and (max-width: 43em) {
+    html {
+      font-size: 30%; } }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-Grey-dark-1);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  background-image: linear-gradient(145deg, rgba(255, 116, 115, 0.9) 0%, rgba(255, 116, 115, 0.9) 50%, transparent 50%), url(../img/net.jpeg);
+  background-size: 100%;
+  border-radius: 3px; }
+  @media only screen and (max-width: 80em) {
+    body {
+      background-color: var(--color-yellow); } }
+  @media only screen and (max-width: 62em) {
+    body {
+      background-image: linear-gradient(to right, var(--color-red), var(--color-yellow)); } }
+
+#line {
+  box-sizing: border-box;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  padding: 3vh 3vh 3vh 5vw;
+  overflow: visible; }
+  #line symbol {
+    overflow: visible; }
+    #line symbol path {
+      d: path(var(--path));
+      transition: d 0.4s cubic-bezier(0, 0.15, 0.31, 1.4);
+      will-change: d;
+      fill: none;
+      stroke-width: var(--stroke, 3px);
+      stroke-linecap: round;
+      stroke-linejoin: round; }
+  #line use:nth-of-type(1) {
+    stroke: url("#gradient"); }
+  #line use:nth-of-type(2) {
+    stroke: rgba(0, 0, 0, 0.5);
+    animation: an 3s alternate infinite backwards cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+
+@keyframes an {
+  0% {
+    stroke-dasharray: 0 var(--lenght); }
+  100% {
+    stroke-dasharray: var(--lenght) var(--lenght); } }
+
+.container {
+  margin: 5rem auto;
+  max-width: 90rem;
+  background-color: var(--color-Grey-light-1);
+  box-shadow: 0 2 rem 6rem rgba(0, 0, 0, 0.3);
+  min-height: 50rem;
+  border-radius: 2rem;
+  padding: 5rem 0;
+  position: relative; }
+  @media only screen and (max-width: 55em) {
+    .container {
+      border-radius: 5px;
+      max-width: 100rem; } }
+
+.box {
+  width: 64rem;
+  margin: 0 auto; }
+  .box > div {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+
+.text-box {
+  text-align: center;
+  margin: 20px;
+  padding-bottom: 2.5rem;
+  color: var(--color-black);
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: 'Righteous', cursive;
+  letter-spacing: .2rem; }
+
+.test {
+  background-color: #34ADFF;
+  background-image: -webkit-linear-gradient(120deg, #34ADFF 35%, #4CBFFF 35%);
+  padding: 1.5rem 3rem;
+  border-radius: 4px; }
+
+.moves {
+  background-color: var(--color-yellow);
+  height: 3.2rem;
+  width: 3.2rem;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 1rem; }
+
+.button {
+  background: var(--color-blue);
+  color: var(--color-black);
+  margin: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer; }
+
+.images div {
+  width: 10rem;
+  height: 10rem;
+  margin: 5px;
+  padding: 5px;
+  border: 4px solid var(--color-blue);
+  border-radius: 10px;
+  cursor: pointer;
+  background: var(--color-blue);
+  transition: all .3s; }
+  .images div:hover {
+    border: 4px solid var(--color-red); }
+  @media only screen and (max-width: 43em) {
+    .images div {
+      width: 12rem;
+      height: 12rem; } }
+
+.images div img {
+  display: none;
+  width: 100%;
+  height: auto; }
+
+.heading {
+  font-size: 4rem;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+  color: var(--color-black);
+  text-transform: uppercase;
+  font-family: 'Luckiest Guy', cursive;
+  letter-spacing: .6rem;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  position: absolute;
+  top: 5%; }
+  @media only screen and (max-width: 55em) {
+    .heading {
+      position: unset;
+      writing-mode: unset; } }
+
+footer p {
+  font-size: .7rem;
+  font-family: inherit;
+  text-align: center; }
+
+.list {
+  display: flex;
+  justify-content: center; }
+
+.item {
+  list-style: none;
+  margin: 1rem; }
+
+.icon {
+  height: 2.5rem;
+  width: 2.5rem;
+  fill: var(--color-black);
+  transform: all .4s; }
+  .icon:hover {
+    fill: var(--color-blue); }

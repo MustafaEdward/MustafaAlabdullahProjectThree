@@ -1,0 +1,133 @@
+:root {
+    --color-red:#ff7473;
+    --color-yellow:#ffc952;
+    --color-blue: #47b8e0;
+    --color-black: #34314c;
+
+
+    --color-Grey-light-1: #faf9f9;
+    --color-Grey-light-2: #f4f2f2;
+    --color-Grey-light-3: #f0eeee;
+    --color-Grey-light-4: #ccc;
+
+
+    --color-Grey-dark-1: #333;
+    --color-Grey-dark-2: #777;
+    --color-Grey-dark-3: #999;
+
+    --line : 1px solid var(--color-Grey-light-2);
+    --shadow-light:  0 2rem 5rem rgba(0, 0, 0, 0.06);
+
+}
+$bp-large: 80em;     // 1272px
+$bp-medium: 62em;   // 992px
+$bp-small: 55em;     // 880px
+$bp-smallest: 43em;   //688px
+
+* {
+    margin: 0;
+    padding: 0;
+}
+*::before,
+*::after, 
+* {
+    box-sizing: inherit;
+}
+html {
+   box-sizing: border-box;
+   font-size: 62.5%;
+   @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+}
+@media only screen and (max-width: $bp-small) {
+  font-size: 40%;
+}
+@media only screen and (max-width: $bp-smallest) {
+ 
+  font-size: 30%;
+  }
+}
+
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-Grey-dark-1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+
+    // background-image: linear-gradient(70deg, 
+    //                                 var(--color-red) 0%,
+    //                                 var(--color-red) 50%,
+    //                                 var(--color-yellow) 50%);
+    // background-size: 100%;
+    // position: relative;
+
+	background-image: linear-gradient(145deg, 
+			rgba(#ff7473, .9) 0%,
+			rgba(#ff7473, .9) 50%,
+			transparent 50%) ,
+	        url(../img/net.jpeg);
+			background-size: 100%;
+      border-radius: 3px;
+      
+      @media only screen and (max-width: $bp-large) {
+        background-color: var(--color-yellow);
+
+    }
+    @media only screen and (max-width: $bp-medium) {
+      background-image: linear-gradient(to right, var(--color-red), var(--color-yellow));
+    }
+           
+};
+
+
+  #line {
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    padding: 3vh 3vh 3vh 5vw;
+    overflow: visible;
+    
+    symbol {
+      overflow: visible;
+      path {
+        d: path(var(--path));
+        transition: d .4s cubic-bezier(0,.15,.31,1.4);
+        will-change: d;
+        fill: none;
+        stroke-width: var(--stroke, 3px);
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    }
+    
+    use {
+      &:nth-of-type(1) {
+        stroke: url('#gradient');
+      }
+      &:nth-of-type(2) {
+        stroke: rgba(0,0,0,0.5);
+        animation: an 3s alternate infinite backwards cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        @keyframes an {
+          0% {stroke-dasharray: 0 var(--lenght)}
+          100% {stroke-dasharray: var(--lenght) var(--lenght)}
+        }
+      }
+    }
+  }
+  // M 43, 2 c 0, 225 -40, 185 -40, 225, 0, 40, 40, 0, 40, 225
+  // M 43, 2 c 0, 150 0, 185 0, 225, 0, 0, 1, 150, 0, 225
+
+
+
+
+
+  
+
+
+
+  
