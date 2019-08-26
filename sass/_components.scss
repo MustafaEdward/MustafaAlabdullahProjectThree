@@ -8,17 +8,10 @@
 	border-radius: 2rem;
 	padding: 5rem 0;
 	position: relative;
-	// @media only screen and (max-width: $bp-largest) {
-    //     margin: 0;
-    //     max-width: 100%;
-    //     width: 100%;
-	// }
 	@media only screen and (max-width: $bp-small) {
 	    border-radius: 5px;
-		 max-width: 100rem;
-	
+		max-width: 100rem;
 	  }
-
 }
 .box {
 	width: 64rem;
@@ -27,11 +20,10 @@
 		display: flex;
 		justify-content: space-around;
 	   flex-wrap: wrap;
-   }
-	
+   }	
 }
 
-.text-box{
+.counter-box{
 		text-align: center;
 		margin:20px;
 		padding-bottom: 2.5rem;
@@ -43,14 +35,14 @@
 		font-family: 'Righteous', cursive;
         letter-spacing: .2rem;
 	}
-	.test{
+	.test {
 			background-color: #34ADFF;
 			background-image: -webkit-linear-gradient(120deg, #34ADFF 35%, #4CBFFF 35%);
 			padding: 1.5rem 3rem;
 			border-radius: 4px;
 	}
 
-	.moves {
+	.count {
 		background-color: var(--color-yellow);
 		height: 3.2rem;
 		width:  3.2rem;
@@ -67,10 +59,7 @@
 		border-radius: 5px;
 		cursor:pointer;
 	}
-	.images div
-	{
-		//display: flex;
-		//float:left;
+	.card {
 		width:10rem;
 		height:10rem;
 		margin:5px;
@@ -86,15 +75,15 @@
 		@media only screen and (max-width: $bp-smallest) {
 			width: 12rem;
 			height: 12rem;
-		 
 		  }
 	}
-	.images div img
-	{
+	.images {
+	img{
 		display: none;
 		width:100%;
 		height:auto;
-	}
+	    }
+     }
 	.heading {
 		font-size: 4rem;
 		text-align: center;
@@ -110,8 +99,7 @@
 		top: 5%;
 		@media only screen and (max-width: $bp-small) {
 			position: unset;
-			writing-mode: unset;
-		 
+		    writing-mode: unset;
 		  }
 	}
 
@@ -128,9 +116,6 @@
 	.item {
 		list-style: none;
         margin: 1rem;
-	}
-	.link {
-
 	}
 	.icon {
 		height: 2.5rem;

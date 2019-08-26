@@ -104,7 +104,7 @@ body {
     justify-content: space-around;
     flex-wrap: wrap; }
 
-.text-box {
+.counter-box {
   text-align: center;
   margin: 20px;
   padding-bottom: 2.5rem;
@@ -122,7 +122,7 @@ body {
   padding: 1.5rem 3rem;
   border-radius: 4px; }
 
-.moves {
+.count {
   background-color: var(--color-yellow);
   height: 3.2rem;
   width: 3.2rem;
@@ -138,7 +138,7 @@ body {
   border-radius: 5px;
   cursor: pointer; }
 
-.images div {
+.card {
   width: 10rem;
   height: 10rem;
   margin: 5px;
@@ -148,14 +148,14 @@ body {
   cursor: pointer;
   background: var(--color-blue);
   transition: all .3s; }
-  .images div:hover {
+  .card:hover {
     border: 4px solid var(--color-red); }
   @media only screen and (max-width: 43em) {
-    .images div {
+    .card {
       width: 12rem;
       height: 12rem; } }
 
-.images div img {
+.images img {
   display: none;
   width: 100%;
   height: auto; }
