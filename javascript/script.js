@@ -107,6 +107,7 @@
 			background: '#ff7473'
 		  })
 	});
+	
 	// svg dimensions for setting up the viewBox and path string:
 const y = 450, // just height
 x = 40, // bump height on x axis

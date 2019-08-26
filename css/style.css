@@ -96,6 +96,24 @@ body {
       border-radius: 5px;
       max-width: 100rem; } }
 
+.heading {
+  font-size: 4rem;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+  color: var(--color-black);
+  text-transform: uppercase;
+  font-family: 'Luckiest Guy', cursive;
+  letter-spacing: .6rem;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  position: absolute;
+  top: 5%; }
+  @media only screen and (max-width: 55em) {
+    .heading {
+      position: unset;
+      writing-mode: unset; } }
+
 .box {
   width: 64rem;
   margin: 0 auto; }
@@ -116,7 +134,7 @@ body {
   font-family: 'Righteous', cursive;
   letter-spacing: .2rem; }
 
-.test {
+.moves-box {
   background-color: #34ADFF;
   background-image: -webkit-linear-gradient(120deg, #34ADFF 35%, #4CBFFF 35%);
   padding: 1.5rem 3rem;
@@ -159,24 +177,6 @@ body {
   display: none;
   width: 100%;
   height: auto; }
-
-.heading {
-  font-size: 4rem;
-  text-align: center;
-  margin-top: 3rem;
-  margin-bottom: 4rem;
-  color: var(--color-black);
-  text-transform: uppercase;
-  font-family: 'Luckiest Guy', cursive;
-  letter-spacing: .6rem;
-  writing-mode: vertical-lr;
-  text-orientation: upright;
-  position: absolute;
-  top: 5%; }
-  @media only screen and (max-width: 55em) {
-    .heading {
-      position: unset;
-      writing-mode: unset; } }
 
 footer p {
   font-size: .7rem;

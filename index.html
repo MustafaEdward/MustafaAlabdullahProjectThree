@@ -7,55 +7,59 @@
         <meta name ="description" content="Matching images game">
         <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Righteous&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="shortcut icon" type="image/jpg" href="img/favicon.png"> 
+        <link rel="shortcut icon" type="image/jpg" href="img/favicon.jpeg"> 
         <title>Memory Hack</title>
     </head>
     <body>  
-    <svg id='line'>
-            <defs>
-                <symbol id="shape" class="shape">
-                    <path/>
-                </symbol>
-            </defs>
-            <use xlink:href="#shape"/>
-            <use xlink:href="#shape"/>
-          
-            <linearGradient id="gradient" gradientTransform="rotate(90)">
-              <stop offset="5%"  stop-color="#E38A74" />
-              <stop offset="95%" stop-color="#BF5967" />
-            </linearGradient>
-          </svg>
-    <h1 class="heading">Memory Hack</h1> 
-    <div class="container">
-        <div class="counter-box">
-            <div class="test">
-            <span class="text">Moves: </span>
-            <span class="count" class="text">0</span>
+        <!-- Animation start -->
+        <svg id='line'>
+                <defs>
+                    <symbol id="shape" class="shape">
+                        <path/>
+                    </symbol>
+                </defs>
+                <use xlink:href="#shape"/>
+                <use xlink:href="#shape"/>
+            
+                <linearGradient id="gradient" gradientTransform="rotate(90)">
+                <stop offset="5%"  stop-color="#E38A74" />
+                <stop offset="95%" stop-color="#BF5967" />
+                </linearGradient>
+        </svg>
+        <!-- Animation ends -->
+        <h1 class="heading">Memory Hack</h1> 
+        <div class="container">
+            <div class="counter-box">
+                <div class="moves-box">
+                    <span class="text">Moves: </span>
+                    <span class="count" class="text">0</span>
+                </div>
+                <a class="button">Reset</a>
             </div>
-            <a class="button">Reset</a>
+            <div class="box">
+                <div class="images">
+                </div>
+            </div>
         </div>
-        <div class="box">
-        <div class="images">
-        </div>
-        </div>
-    </div>
-   <footer>
-       <ul class="list">
-           <li class="item"><a  target ="_blank" href="https://www.instagram.com/thisishackeryou/?hl=en">
-            <svg class="icon">
-                    <use xlink:href="img/sprite.svg#icon-instagram"></use>
-            </svg>
-         </a>
-         </li>
-        <li class="item"><a target ="_blank" href="https://twitter.com/hackeryou">
-            <svg class="icon">
-                    <use xlink:href="img/sprite.svg#icon-twitter"></use>
-            </svg></a>
-        </li>
-       </ul>
-       <p>Designed &#38; Developed by Mustafa  &verbar; &verbar;<span>  Cursor animation by Damian Tarnawski.</span></p>
-    </footer>
-
+        <footer>
+            <ul class="list">
+                <li class="item">
+                  <a  target ="_blank" href="https://www.instagram.com/thisishackeryou/?hl=en">
+                    <svg class="icon">
+                            <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="item">
+                   <a target ="_blank" href="https://twitter.com/hackeryou">
+                    <svg class="icon">
+                            <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                    </svg>
+                   </a>
+                </li>
+            </ul>
+            <p>Designed &#38; Developed by Mustafa  &verbar; &verbar;<span>  Cursor animation by Damian Tarnawski.</span></p>
+        </footer>
 
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
