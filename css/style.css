@@ -3,15 +3,7 @@
   --color-yellow:#ffc952;
   --color-blue: #47b8e0;
   --color-black: #34314c;
-  --color-Grey-light-1: #faf9f9;
-  --color-Grey-light-2: #f4f2f2;
-  --color-Grey-light-3: #f0eeee;
-  --color-Grey-light-4: #ccc;
-  --color-Grey-dark-1: #333;
-  --color-Grey-dark-2: #777;
-  --color-Grey-dark-3: #999;
-  --line: 1px solid var(--color-Grey-light-2);
-  --shadow-light:  0 2rem 5rem rgba(0, 0, 0, 0.06); }
+  --color-Grey-light-1: #faf9f9; }
 
 * {
   margin: 0;
@@ -27,13 +19,10 @@ html {
   font-size: 62.5%; }
   @media only screen and (max-width: 80em) {
     html {
-      font-size: 50%; } }
-  @media only screen and (max-width: 55em) {
-    html {
-      font-size: 40%; } }
+      font-size: 55%; } }
   @media only screen and (max-width: 43em) {
     html {
-      font-size: 30%; } }
+      font-size: 52%; } }
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -94,7 +83,13 @@ body {
   @media only screen and (max-width: 55em) {
     .container {
       border-radius: 5px;
-      max-width: 100rem; } }
+      max-width: 100%;
+      margin: 0 auto;
+      width: 100%; } }
+
+@media only screen and (max-width: 55em) {
+  #line {
+    display: none; } }
 
 .heading {
   font-size: 4rem;
@@ -109,7 +104,7 @@ body {
   text-orientation: upright;
   position: absolute;
   top: 5%; }
-  @media only screen and (max-width: 55em) {
+  @media only screen and (max-width: 62em) {
     .heading {
       position: unset;
       writing-mode: unset; } }
@@ -117,9 +112,12 @@ body {
 .box {
   width: 64rem;
   margin: 0 auto; }
+  @media only screen and (max-width: 43em) {
+    .box {
+      width: 100%; } }
   .box > div {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap; }
 
 .counter-box {
@@ -139,6 +137,9 @@ body {
   background-image: -webkit-linear-gradient(120deg, #34ADFF 35%, #4CBFFF 35%);
   padding: 1.5rem 3rem;
   border-radius: 4px; }
+  @media only screen and (max-width: 55em) {
+    .moves-box {
+      padding: .8rem 1.6rem; } }
 
 .count {
   background-color: var(--color-yellow);
@@ -157,8 +158,8 @@ body {
   cursor: pointer; }
 
 .card {
-  width: 10rem;
   height: 10rem;
+  flex: 0 0 10rem;
   margin: 5px;
   padding: 5px;
   border: 4px solid var(--color-blue);
@@ -170,8 +171,7 @@ body {
     border: 4px solid var(--color-red); }
   @media only screen and (max-width: 43em) {
     .card {
-      width: 12rem;
-      height: 12rem; } }
+      flex-shrink: 2; } }
 
 .images img {
   display: none;

@@ -16,8 +16,8 @@
 					  ];
 	function imagePosition() {
 		let arrayLength = imageList.length*2;
-		let newArrayOfImages = new Array();
-		newArrayOfImages = $.merge($.merge([], imageList), imageList);
+		let newArrayOfImages = new Array(); 
+		newArrayOfImages = $.merge($.merge([], imageList), imageList); 
 		let currentImage = $(".images div:first-child");
 		for(let z = 0;z < arrayLength;z++)
 		{
