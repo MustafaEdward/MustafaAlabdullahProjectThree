@@ -20,9 +20,12 @@ html {
   @media only screen and (max-width: 80em) {
     html {
       font-size: 58%; } }
-  @media only screen and (max-width: 25em) {
+  @media only screen and (max-width: 43em) {
     html {
-      font-size: 40%; } }
+      font-size: 65%; } }
+  @media only screen and (max-width: 28.75em) {
+    html {
+      font-size: 35%; } }
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -85,7 +88,6 @@ body {
       border-radius: 5px;
       max-width: 100%;
       margin: 0 auto;
-      width: 90%;
       padding: 0; } }
 
 @media only screen and (max-width: 55em) {
@@ -120,6 +122,9 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap; }
+    @media only screen and (max-width: 28.75em) {
+      .box > div {
+        justify-content: center; } }
 
 .counter-box {
   text-align: center;

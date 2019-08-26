@@ -11,7 +11,6 @@
 	    border-radius: 5px;
 		max-width: 100%;
 		margin: 0 auto;
-		width: 90%;
 		padding: 0;
 	  }
 }
@@ -48,6 +47,10 @@
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
+		@media only screen and (max-width: $bp-iphone) {
+              justify-content: center;
+	
+		}
    }	
 }
 .counter-box{
