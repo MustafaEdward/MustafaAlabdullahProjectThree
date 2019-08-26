@@ -10,7 +10,7 @@ $bp-large: 80em;     // 1272px
 $bp-medium: 62em;   // 992px
 $bp-small: 55em;     // 880px
 $bp-smallest: 43em;   //688px
-
+$bp-iphone: 25em;     //400px
 * {
     margin: 0;
     padding: 0;
@@ -24,10 +24,10 @@ html {
    box-sizing: border-box;
    font-size: 62.5%;
    @media only screen and (max-width: $bp-large) {
-    font-size: 55%;
+    font-size: 58%;
 }
-@media only screen and (max-width: $bp-smallest) {
-  font-size: 52%;
+@media only screen and (max-width: $bp-iphone) {
+  font-size: 40%;
 }
 }
 body {
